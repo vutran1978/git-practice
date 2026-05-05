@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dịch vụ bán hàng online</title>
+  <style>
+    :root {
+      --primary: #2b6cb0;
+      --secondary: #edf2f7;
+      --text: #1a202c;
+      --bg: #f7fafc;
+      --accent: #48bb78;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    header {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .container {
+      width: min(1120px, 100% - 2rem);
+      margin: 0 auto;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    nav a { color: var(--text); text-decoration: none; margin-left: 1.5rem; font-weight: 500; }
+    .brand { font-size: 1.25rem; font-weight: 700; color: var(--primary); }
+    .hero {
+      display: grid;
+      gap: 2rem;
+      padding: 4rem 0 5rem;
+      align-items: center;
+    }
+    .hero-text h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.05;
+    }
+    .hero-text p {
+      margin: 1.5rem 0;
+      max-width: 36rem;
+      color: #4a5568;
+    }
+    .btn-primary, .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 999px;
+      padding: 0.95rem 1.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-secondary { background: white; color: var(--text); border: 1px solid #cbd5e0; }
+    .hero-image {
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(45,55,72,.12);
+    }
+    .hero-image img { width: 100%; display: block; }
+    .grid-3 {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card {
+      background: white;
+      border-radius: 1.25rem;
+      padding: 1.75rem;
+      box-shadow: 0 14px 40px rgba(15,23,42,.06);
+    }
+    .card h3 { margin-top: 0; }
+    .section {
+      padding: 3rem 0;
+    }
+    .section-alt { background: #ffffff; }
+    .features li {
+      list-style: none;
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      color: #718096;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; }
+      nav a { margin-left: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">ShopOnline</div>
+        <div>
+          <a href="#services">Dịch vụ</a>
+          <a href="#products">Sản phẩm</a>
+          <a href="#about">Về chúng tôi</a>
+          <a href="#contact">Liên hệ</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div class="hero-text">
+        <p style="color: var(--primary); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;">Bán hàng online dễ dàng</p>
+        <h1>Giải pháp thương mại điện tử trọn gói cho doanh nghiệp của bạn</h1>
+        <p>ShopOnline giúp bạn mở cửa hàng trực tuyến, quản lý đơn hàng, thanh toán và giao hàng nhanh chóng. Tối ưu trải nghiệm khách hàng và bán nhiều hơn mỗi ngày.</p>
+        <div style="display:flex; gap:1rem; flex-wrap: wrap;">
+          <a href="#contact" class="btn-primary">Bắt đầu ngay</a>
+          <a href="#services" class="btn-secondary">Tìm hiểu thêm</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80" alt="Bán hàng online" />
+      </div>
+    </section>
+
+    <section id="services" class="container section section-alt">
+      <div style="text-align:center; max-width: 640px; margin: 0 auto 2rem;">
+        <p style="color: var(--primary); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;">Dịch vụ của chúng tôi</p>
+        <h2>Toàn diện từ trang chủ đến giao hàng</h2>
+        <p>Chúng tôi cung cấp nền tảng bán hàng online chuyên nghiệp, giúp bạn tập trung vào phát triển kinh doanh mà không cần lo kỹ thuật.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Website bán hàng</h3>
+          <p>Trang chủ và gian hàng trực tuyến đẹp mắt, thân thiện với cả điện thoại và máy tính.</p>
+        </div>
+        <div class="card">
+          <h3>Quản lý đơn hàng</h3>
+          <p>Đồng bộ hóa đơn hàng, theo dõi trạng thái và chăm sóc khách hàng nhanh chóng.</p>
+        </div>
+        <div class="card">
+          <h3>Thanh toán & giao hàng</h3>
+          <p>Tích hợp cổng thanh toán, vận chuyển và báo cáo doanh thu đầy đủ.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="container section">
+      <div style="display:flex; gap:2rem; flex-wrap: wrap; align-items: start;">
+        <div style="flex:1; min-width:280px;">
+          <p style="color: var(--primary); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;">Sản phẩm nổi bật</p>
+          <h2>Giải pháp phù hợp với mọi mô hình kinh doanh</h2>
+          <p>Cho dù bạn bán thời trang, đồ điện tử, mỹ phẩm hay thực phẩm, chúng tôi có thể xây dựng cửa hàng phù hợp với nhu cầu của bạn.</p>
+          <ul class="features">
+            <li>Thiết kế chuyên nghiệp, thân thiện di động</li>
+            <li>Quản lý sản phẩm, tồn kho và khuyến mãi dễ dàng</li>
+            <li>Báo cáo doanh thu theo thời gian thực</li>
+          </ul>
+        </div>
+        <div class="grid-3" style="flex:1;">
+          <div class="card"><h3>Thời trang</h3><p>Giao diện thanh lịch, phù hợp cửa hàng quần áo, phụ kiện.</p></div>
+          <div class="card"><h3>Đồ công nghệ</h3><p>Trang sản phẩm chi tiết, hỗ trợ so sánh và đánh giá.</p></div>
+          <div class="card"><h3>Đồ ăn & gia vị</h3><p>Đơn hàng nhanh, quản lý giao hàng thông minh.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section section-alt">
+      <div style="text-align:center; max-width: 700px; margin: 0 auto;">
+        <p style="color: var(--primary); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;">Về chúng tôi</p>
+        <h2>Đồng hành cùng bạn trên hành trình bán hàng trực tuyến</h2>
+        <p>Chúng tôi kết hợp công nghệ, thiết kế và dịch vụ chăm sóc khách hàng để giúp doanh nghiệp của bạn phát triển bền vững trên nền tảng số.</p>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="grid-3">
+        <div class="card">
+          <h3>Hỗ trợ nhanh chóng</h3>
+          <p>Đội ngũ tư vấn luôn sẵn sàng giúp bạn khởi tạo và vận hành cửa hàng.</p>
+        </div>
+        <div class="card">
+          <h3>Giải pháp linh hoạt</h3>
+          <p>Khởi tạo nhanh, tùy chỉnh theo phong cách thương hiệu, mở rộng dễ dàng.</p>
+        </div>
+        <div class="card">
+          <h3>Tiết kiệm chi phí</h3>
+          <p>Khoản đầu tư hợp lý cho nền tảng online chất lượng, tối ưu lợi nhuận.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section section-alt">
+      <div style="text-align:center; max-width: 640px; margin: 0 auto;">
+        <p style="color: var(--primary); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;">Liên hệ</p>
+        <h2>Bắt đầu xây dựng cửa hàng của bạn ngay hôm nay</h2>
+        <p>Gửi yêu cầu và chúng tôi sẽ liên hệ giúp bạn tư vấn, demo dịch vụ và triển khai nhanh chóng.</p>
+        <a href="mailto:hotro@shoponline.vn" class="btn-primary">Gửi yêu cầu</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 ShopOnline. Giải pháp bán hàng trực tuyến cho doanh nghiệp Việt Nam.</p>
+    </div>
+  </footer>
+</body>
+</html>
